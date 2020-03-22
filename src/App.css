@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+
+  color: #191919;
+  background-color: #ecf0f1;
+}
+
+hr {
+  border: 1px solid #34699B;
+  margin: 0;
+}
+
+/* App-wide styling */
+.appContainer {
+  min-width: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+}
+
+/* Graph-specific styling */
+.graphContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media(max-width: 1366px) {
+  .gvGraph {
+    max-width: 80%;
+    float: right;
+  }
+}
+
+/* The information panel, including the course code entry box */
+.infoPanel {
+  position: absolute;
+
+  width: 30rem;
+  padding: 2rem;
+
+  border-radius: 0 0 1rem 0;
+
+  background-color: rgba(236, 240, 241, 0);
+
+  pointer-events: none;
+}
+
+/* Box containing the course code entry box and course name */
+.titleBox {
+  padding: .5rem;
+}
+
+/* Plaintext information about the course's recommended/required knowledge, in full */
+.infoBox {
+  padding: .5rem;
+  margin-top: .5rem;
+}
+
+/* Course code input form */
+.courseInputForm {
+  width: 30rem;
+  max-width: 30rem;
+  margin: 0;
+
+  pointer-events: visible;
+}
+
+/* The actual text input */
+.courseInputTextArea {
+  max-height: 1.35em;
+  border: none;
+  resize: none;
+  padding: 0;
+
+  background-color: rgba(236, 240, 241, 0);
+  font-size: 2em;
+  font-weight: bold;
+
+  white-space: nowrap;
+}
+
+/* Course name */
+.infoTitleName {
+  font-style: italic;
+  color: #494949;
+}
+
+/* Bottom-right button for toggling between d3-graph and graphviz */
+.graphToggler {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  bottom: .5rem;
+  right: .5rem;
+
+  color: #494949;
+  border: 1px solid #494949;
+  border-radius: 12px;
+
+  -webkit-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  -moz-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  -o-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+.graphToggler:hover {
+  background-color: #494949;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.graphToggler p {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+  vertical-align: middle;
+  font-size: .7em;
+  font-style: bold;
+
+  line-height: 30px;
+
+  pointer-events: none;
+}
+
+/* "Made by..." in the bottom left */
+.about {
+  position: absolute;
+  left: .5rem;
+  bottom: .5rem;
+
+  color: #494949;
+  font-size: .7em;
+
+  pointer-events: none;
+}
+
+.ghLink {
+  color: #494949;
+  text-decoration: none;
+
+  pointer-events: visible;
+}
+
+.ghLink:hover {
+  text-decoration: underline;
+}
+
+/* Makes the mouse ignore d3-graph node labels */
+text {
+  pointer-events: none;
+}
